@@ -6,6 +6,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
+    "test": "mocha",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
@@ -26,7 +27,9 @@
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "runjs": "^4.3.2",
+    "should": "^13.2.3"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
